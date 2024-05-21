@@ -20,11 +20,11 @@
     ```
 - **Copy Public Key to Server:**
     ```bash
-    ssh-copy-id -i /root/.ssh/id_rsa.pub root@192.168.205.22
+    ssh-copy-id -i /root/.ssh/id_rsa.pub root@192.168.100.2
     ```
 - **Log in Using SSH Key:**
     ```bash
-    ssh -i /root/.ssh/id_rsa root@192.168.205.22
+    ssh -i /root/.ssh/id_rsa root@192.168.100.2
     ```
 - **Edit SSH Server Config to Disable Password Authentication:**
     ```bash
@@ -60,7 +60,7 @@
 
 1. **Copy the public key to the Ubuntu server:**
     ```bash
-    ssh-copy-id -i /root/.ssh/id_rsa.pub root@192.168.205.22
+    ssh-copy-id -i /root/.ssh/id_rsa.pub root@192.168.100.2
     ```
     - Accept the server's fingerprint if prompted.
     - Enter the password for the `root` user on the Ubuntu server when prompted.
@@ -105,7 +105,7 @@
 - **Host Key Verification Failed:**
     - Remove the existing entry from `~/.ssh/known_hosts` and try again:
       ```bash
-      ssh-keygen -R 192.168.205.22
+      ssh-keygen -R 192.168.100.2
       ```
 - **Permission Denied (publickey):**
     - Ensure the permissions of `.ssh` directory and files are correct:
